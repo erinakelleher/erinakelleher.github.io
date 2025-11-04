@@ -1,0 +1,26 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<div id="formdiv">
+			<form>
+			<label for="fname">First name:</label><br>
+			<input type="text" id="fname"><br>
+			<label for="lname">Last name:</label><br>
+			<input type="text" id="lname"><br>
+			<label for="email">Email:</label><br>
+			<input type="text" id="email"><br>
+			<input type="submit" value="Add Contact">
+			</form>
+		</div>
+		<!---after submitting, add to an array in the script create an entry (new element) in the storeddata div. the new element will have an ID that is the array index-->
+		<div id="datadisplay">
+			<!--the below div will contain all the submitted entries, with each one having an option to delete it. 
+				the deletion will both remove the html element and do a splice() to remove that item from the memory -->
+			<div id="storeddata">
+			</div>
+			<!--the below calls a function which gets all data from that list and puts it into a downloadable .csv file-->
+			<button>Create .CSV</button>
+		</div>
+	</body>
+</html>
