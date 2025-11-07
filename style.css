@@ -6,3 +6,10 @@ body{
 	padding:5px;
 	border: 1px black solid;
 }
+.xButton{
+	color: crimson;
+	text-align: right;
+	font-size: 23px;
+	border: 1px black dashed;
+	cursor: pointer;
+}
