@@ -1,5 +1,4 @@
 window.addEventListener("load", (event) => {
-  console.log("page is fully loaded");
   document.getElementById('addition').addEventListener("click", addOneContact);
   document.getElementById('createCSV').addEventListener("click", createFile);
 });
@@ -7,13 +6,13 @@ window.addEventListener("load", (event) => {
 
 function removeContact(){
 	if (confirm("delete this contact?")==true){
-		allContacts.splice(this.getAttribute("id"), 1);
+		allContacts.splice(allContacts.indexOf(this.parentElement.innerHTML), 1);
 		this.parentElement.remove();
+		console.log(allContacts);
 	}
 
 }
 
-var contactsIndex = 0;
 var allContacts = [];
 
 function addOneContact(){
@@ -31,8 +30,6 @@ function addOneContact(){
 	const contactsArea = document.getElementById("addedcontacts");
 	const createdContact = document.createElement("div");
 	createdContact.setAttribute("class","contact");
-	createdContact.setAttribute("id",contactsIndex);
-	contactsIndex++;
 	createdContact.innerHTML = fname + "," + lname + "," + email;
 	createdContact.addEventListener("mouseover",function(){
 		this.setAttribute("style","background: #cccccc");
